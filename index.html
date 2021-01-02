@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Simple calculator </title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="author" content="mahbub"> 
+  <meta name="description" content="It's a simple calculator "> 
+  <meta name="keywords" content="programming hero, web playground"> 
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon"> 
+ 
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+  <!--@bootstrapCss--> 
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <!--custom css--> 
+  <link rel="stylesheet" href="css/style.css"> 
+ </head> 
+ <body> 
+  <div id="app" name="is"> 
+   <div id="calculator" class="main" name="cal"> 
+    <div id="header"> 
+     <h2> Simple Calculator</h2> 
+    </div> 
+    <form name="fname"> 
+     <input id="input" value="" name="display" disabled> 
+    </form> 
+    <div id="buttons"> 
+     <table> 
+      <tbody>
+       <tr> 
+        <td><input id="one" type="button" value="1" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="2" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="3" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="+" class="button math" onClick="btnClick(this)"></td> 
+       </tr> 
+       <tr> 
+        <td><input type="button" value="4" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="5" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="6" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="-" class="button math" onClick="btnClick(this)"></td> 
+       </tr> 
+       <tr> 
+        <td><input type="button" value="7" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="8" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="9" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="*" class="button math" onClick="btnClick(this)"></td> 
+       </tr> 
+       <tr> 
+        <td><input type="button" value="C" class="button btn-danger" onClick="clean()"></td> 
+        <td><input type="button" value="0" class="button num" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="/" class="button math" onClick="btnClick(this)"></td> 
+        <td><input type="button" value="=" class="button math" onclick="fname.display.value =eval(fname.display.value) "></td> 
+       </tr> 
+      </tbody>
+     </table> 
+    </div> 
+   </div> 
+  </div>   
+  <script> 
+
+  
+
+
+
+
+
+function btnClick(currentBtn){
+   var btnValue = currentBtn.value;
+   
+   document.getElementById("input").value += btnValue;
+   
+}
+
+function clean(){
+   document.getElementById("input").value = "";
+}
+
+
+
+ </script> 
+  <!--main js--> 
+  <script src="js/main.js"></script>  
+  <footer> 
+   <p class="programminghero">Learned and developed this site with <a href="http://www.programming-hero.com">Programming Hero</a></p> 
+  </footer>
+ </body>
+</html>
